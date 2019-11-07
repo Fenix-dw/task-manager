@@ -1,0 +1,920 @@
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+    background-image: url(imges/website/bg.jpg);
+    background-size: cover;
+}
+
+/*===========
+Шапка task-manager
+=================*/
+
+
+#shapka {
+	width: 100%;
+    height: 40px;
+    background: #2bd05e;
+}
+
+#logo {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    float: left;
+
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 2px;
+    left: 15px;
+
+}
+
+#logo span{
+	font-size: 26px;
+    position: absolute;
+    top: 5px;
+	left: 77px;
+    color: white;
+}
+
+#menu {
+    float: right;
+    height: 100%;
+}
+
+#menu a{
+	color: white;
+    text-decoration: none;
+    font-size: 20px;
+    height: calc(100% - 9px);
+    display: block;
+    float: left;
+    padding: 9px 10px 0;
+}
+
+#menu a:hover {
+	background: #1f9844;
+}
+/*=====================================
+Основной блок с списками и заданиями
+=======================================*/
+#content {
+	width: 800px;
+    height: calc(100% - 75px);
+    margin: 0 auto;
+    background: white;
+}
+
+/*==================================
+Левый блок с списком
+======================================*/
+
+#list {
+	width: 260px;	
+    height: 100%;
+	float: left;
+    background: white;
+    border-right: 1px solid #505050a1;
+}
+
+/*=================================
+Пользователь
+=====================================*/
+
+
+#user {
+    height: 31px;
+    padding: 10px;
+    width:  241px;
+    border-bottom: 1px solid #505050a1;
+}
+
+
+#user  .img-user{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 11px;
+    position: relative;
+    bottom: 5px;
+}
+
+#user  .img-user img{
+    width: 100%;
+    height: 100%;
+}
+#user  h2 {
+    margin: 0; 
+    font-size: 37px;
+    position: relative;
+    top: -7px;
+}
+
+
+/*================================
+Список закладок
+=================================*/
+
+#spisok {
+	height: calc(100% - 87px);
+    overflow-y: auto;
+}
+#spisok ul{
+	margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+#spisok ul li {
+	padding: 10px;
+	position: relative;
+	width: calc(100% - 20px);
+}
+
+#spisok ul a {
+	text-decoration: none;
+	color: #000000;
+}
+
+#spisok ul .img-list{
+	width: 27px;
+    height: 27px;
+    float: left;
+    margin-right: 10px;
+}
+
+#spisok ul .img-list img{
+	width: 100%;
+	height: 100%;
+}
+#spisok  h2 {
+	margin: 0;
+	margin-bottom:5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 80px);
+    white-space: nowrap;
+}
+#spisok .close{
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none; 
+}
+/*================================
+Добавление закладки
+=================================*/
+#add-list {
+    position: relative; 
+    border-top: 1px solid #505050a1;
+}
+
+#add-list a {
+    text-decoration: none;
+    color: #16a041;
+}
+#add-list .img-list{
+    width: 27px;
+    height: 27px;
+    float: left;
+    padding: 3px;
+}
+
+#add-list .img-list img{
+    width: 100%;
+    height: 100%;
+}
+#add-list  h2 { 
+    margin: 0;
+    font-size: 28px;
+}
+/* =================
+Делаем красивый скрол
+================== */
+#spisok::-webkit-scrollbar-track,
+#task-list::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+#spisok::-webkit-scrollbar,
+#task-list::-webkit-scrollbar{
+    border-radius: 10px;
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+#spisok::-webkit-scrollbar-thumb,
+#task-list::-webkit-scrollbar-thumb{
+    background-color: #4caf50;
+    border-radius: 10px;
+    
+    background-image: -webkit-gradient(linear, 0 0, 0 100%,
+                       color-stop(.5, rgba(255, 255, 255, .2)),
+                       color-stop(.5, transparent), to(transparent));
+}
+
+/*===================================
+Завдання
+========================================*/
+#task {
+    width: 539px;
+    float: right;
+    height: 100%;    
+}
+    
+/*=================================
+Назва Списка
+======================================*/
+
+#img-task {
+    height: 200px;
+}
+
+#img-task img{
+    height: 100%;
+    width: 100%;
+}
+
+#img-task h2 {
+    margin: 0;
+    font-size: 50px;
+    color: white;
+    top: -83px;
+    padding: 10px;
+    position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*=====================================
+Список завдань
+========================================*/
+
+#task-list{
+   height: calc(100% - 235px);
+   overflow-y: auto;
+   background: #e0e0e0;
+}
+#task-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#task-list ul .img {
+    width: 20px;
+    height: 20px;
+    float: left;
+    position: relative;
+    top:2px;
+    
+}
+
+#task-list ul #status {
+ cursor: pointer;
+ }
+#task-list ul .img .started, #task-list ul .img .finished {
+    width: 100%;
+    height: 100%;
+    border:2px solid gray;
+    border-radius: 50%;
+}
+
+#task-list ul .img .finished {
+    background-color: green;
+}
+
+
+
+#task-list ul li {
+    border: 1px solid #505050a1;
+    border-top: 0;
+    border-left: 0;
+    background: white;
+    /*border-radius: 23px;*/
+    position: initial;
+    padding: 10px;
+        
+}
+
+#task-list ul h2{
+    margin: 0;
+    left: 30px;
+    width: calc(100% - 61px);
+    position: relative;
+    /*border: 1px solid red;*/
+}
+
+#task-list .close{
+    position: relative;
+    top: -21px;
+    right: 10px;
+    cursor: pointer;
+    float: right;
+    color: black;
+    text-decoration: none;
+}
+/*================================
+Добавление задач
+=================================*/
+#add-task {
+    background: white;
+    position: relative;
+    border-top: 1px solid #505050a1;
+}
+
+#add-task a {
+    text-decoration: none;
+    color: #16a041;
+}
+#add-task .img{
+    width: 27px;
+    height: 27px;
+    float: left;
+    padding: 5px;
+}
+
+#add-task .img img{
+    width: 100%;
+    height: 100%;
+}
+#add-task  h2 {
+    margin: 0;
+    font-size: 30px;
+}
+
+/* ================
+Стили для модальных окон
+============================ */
+
+.modal {
+    display: none;
+    width: 360px;
+    background: white;
+    border-radius: 10px;
+    border: 2px solid #2bd05e;
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 200px);
+    padding: 20px;
+    max-height: 300px;
+    z-index: 99999;
+    
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+/*================================
+Модальне окно з входом
+===================================*/
+#log-out-modal {
+    height: 187px;
+}
+
+#log-out-modal input {
+    background: #d6d6d6;
+    border: none;
+    height: 25px;
+    margin: 0;
+    float: left;
+    border-radius: 17px;
+    margin-right: 10px;
+    width: calc(100% - 20px);
+    outline: none;
+    padding: 0 10px;
+}
+
+#log-out-modal h2 {
+    margin: 0;
+}
+
+#log-out-modal p{        
+    font-size: 19px;
+    margin: 13px;
+}
+
+#log-out-modal .password {
+    margin: 0;
+    margin-top: 27px;
+}
+
+#log-out-modal button {
+    width: 76px;
+    height: 31px;
+    border: none;
+    background: #30e869;        
+    border-radius: 11px;
+    outline: none;
+    position: absolute;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 27px;
+    right: 40%;
+}
+
+#log-out-modal button:active {
+    background:  #7fe69f;
+}
+
+#log-out-modal a {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    display: block;
+    float: right;
+    padding: 0px 10px 0;
+    margin-top: -27px;
+}
+
+.eror {
+    margin: 0;
+    position: absolute;
+    top: 47px;
+    left: 407px;
+}
+
+/*================================
+Модальне окно з регестрацией
+===================================*/
+#registration-modal {
+    height: 225px;
+}
+
+#registration-modal p {        
+    font-size: 19px;
+    margin: 13px;
+}
+
+#registration-modal h2 {
+    margin: 0;
+    float: right;
+    padding: 0px 10px 0;
+}
+#registration-modal .password {
+    margin: 0;
+    margin-top: 25px;
+}
+
+#registration-modal input {
+    background: #d6d6d6;
+    border: none;
+    height: 25px;
+    border-radius: 17px;
+    margin: 0;
+    float: left;
+    margin-right: 10px;
+    width: calc(99% - 20px);
+    outline: none;
+    padding: 0 10px;
+}
+#registration-modal a {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    display: block;
+    float: left;    
+}
+#next {
+    width: 110px;
+    height: 31px;
+    border: none;
+    background: #30e869;
+    border-radius: 11px;
+    margin-top: 2px;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    left: 37%;
+}
+
+#next h3 {
+    position: relative;
+    top: 4px;
+    left: 32px;
+    margin: 0;
+
+}
+
+#next:active {
+    background:  #7fe69f;
+}
+
+
+.add {
+    margin: 0;
+    position: absolute;
+    top: 56px;    
+    left: calc(50% - 127px);
+}
+
+/*================================
+Модальне окно з регестрацией аватара
+===================================*/
+#registration-avatar-modal {
+    width: 395px;
+    
+}
+
+
+#registration-avatar-modal h1 {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    top: -15px;
+}
+
+#registration-avatar-modal .avatar {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    float: left;
+    left: 35px;
+    top: -28px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #2bd05e;
+    border-radius: 53px;
+    background: #5d5454;
+    padding: 0;
+}
+
+ 
+#registration-avatar-modal h2 {
+    margin: 0;
+    position: absolute;
+    left: 31px;
+    top: -7px;
+    font-size: 67px;
+
+}
+
+#registration-avatar-modal .avatar p{
+    margin: 0;
+    position: absolute;
+    top: 52px;
+    font-size: 32px;
+    left: 23px;    
+}
+#registration-avatar-modal .avatar div {
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    position: absolute;
+    border-radius: 53px;
+}
+
+#registration-avatar-modal .avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#registration-avatar-modal button {
+    width: 136px;
+    height: 31px;
+    border: none;
+    background: #30e869;    
+    border-radius: 11px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    top: -25px;
+    left: 34%;
+}
+
+#registration-avatar-modal button:active {
+    background:  #30e86947;
+}
+
+#registration-avatar-modal .avatar div:active {
+    background:  #30e86947;
+    z-index: 999999;
+}
+
+/*=================================================
+Стили для формы загрузки фото для аватарки 
+
+==========================================================*/
+   
+.input-file-row-1:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.input-file-row-1{
+    display: inline-block;
+    margin-top: -7px;
+    margin-left: 30px;
+    position: relative;
+}
+
+html[xmlns] .input-file-row-1{
+    display: block;
+}
+
+* html .input-file-row-1 {
+    height: 1%;
+}
+
+.upload-file-container { 
+    position: relative;
+    width: 139px;
+    height: 137px;
+    overflow: hidden;
+    /* background: url(imges/upFileBg.png) top center no-repeat; */
+    float: left;
+    margin-left: 23px;
+} 
+
+.upload-file-container:first-child { 
+    margin-left: 62px;
+} 
+
+.upload-file-container > img {
+    width: 93px;
+    height: 93px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    left: 44px;
+    position: relative;
+}
+
+.upload-file-container-text{
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    /* color: #719d2b; */
+    line-height: 17px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 4px;
+    bottom: 0;
+    width: 100px;
+    height: 35px;
+}
+
+.upload-file-container-text > span{
+    border-bottom: 1px solid #719d2b;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+}
+
+#registration-download-avatar-modal .input-file-row-1 > input{
+    position: absolute;
+    bottom: 10px;
+    right: -29px;
+    z-index: 999999;
+    background-color: #30E869;
+}
+ h1 {
+    margin: 0;
+    text-align: center;
+}
+#registration-download-avatar-modal p {
+    position: relative;
+    height: 12px;
+}
+
+#back {
+    width: 110px;
+    height: 31px;
+    border: none;
+    background: #30e869;
+    border-radius: 11px;
+    margin-top: 2px;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    left: 8%;    
+} 
+
+#back h3 {
+    position: relative;
+    top: 4px;
+    left: 32px;
+    margin: 0;
+
+}
+
+#registration-download-avatar-modal button {
+    width: 130px;
+    height: 31px;
+    border: none;
+    background: #30e869;
+    border-radius: 11px;
+    outline: none;
+    position: absolute;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 3px;
+    right: 5%;
+}
+
+#registration-download-avatar-modal .upload-file-container input  { 
+    position: absolute; 
+    left: 15px; 
+    bottom: 0; 
+    font-size: 1px; 
+    opacity: 0;
+    filter: alpha(opacity=0);   
+    margin: 0; 
+    padding: 0; 
+    border: none; 
+    width: 70px; 
+    height: 50px; 
+    cursor: pointer;
+}
+
+.progress_outer {
+    border: 1px solid #000;
+    position: absolute;
+    top: 134px;
+    left: 0px;
+    width: 300px;
+}
+.progress {
+    width: 20%;
+    background: #30E869;
+    height: 20px;  
+}
+#registration-download-avatar-modal .progress p{
+    display: none;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    height: 20px;
+    font-size: 18px;
+}
+
+/*================================
+Модальне окно з додаванням групи
+===================================*/
+#addList-modal {
+    height: 145px;
+    top: 178px;
+}
+
+#addList-modal input {
+    background: #d6d6d6;
+    border: none;
+    height: 25px;
+    border-radius: 17px;
+    margin: 0;
+    float: left;
+    margin-right: 10px;
+    width: calc(100% - 20px);
+    outline: none;
+    padding: 0 10px;
+}
+
+#addList-modal p {
+    font-size: 19px;
+}
+#addList-modal h1 {
+    margin: 0;
+    text-align: center;
+}
+
+#addList-modal button {
+    width: 76px;
+    height: 31px;
+    border: none;
+    background: #30e869;       
+    border-radius: 11px;
+    outline: none;
+    position: absolute;
+    cursor: pointer;
+    padding: 0;
+    right: 40%;
+}
+
+#addList-modal button:active {
+    background:  #7fe69f;
+}
+
+/*================================
+Модальне окно з додаванням задач
+===================================*/
+#addTask-modal {
+    height: 210px;
+    top: 178px;
+}
+
+#addTask-modal input {
+    background: #d6d6d6;
+    border-radius: 17px;
+    border: none;
+    height: 25px;
+    margin: 0;
+    float: left;
+    margin-right: 10px;
+    width: calc(100% - 20px);
+    outline: none;
+    padding: 0 10px;
+}
+
+#addTask-modal p {
+    font-size: 19px;
+}
+#addTask-modal h2 {
+    margin: 0;
+    text-align: center;
+}
+
+#addTask-modal textarea {
+    height: 87%;
+    width: 98%;
+    outline: none;
+    background: #d6d6d6;
+}
+
+#addTask-modal button {
+    width: 76px;
+    height: 31px;
+    border: none;
+    background: #30e869;   
+    border-radius: 11px;
+    outline: none;
+    position: absolute;
+    margin-top: -10px;
+    cursor: pointer;
+    padding: 0;
+    right: 40%;
+}
+
+#addTask-modal button:active {
+    background:  #7fe69f;
+}
+
+/*================================
+Стили для акардеона заданий
+ ==================================*/
+ .tab input, .tab-content { display: none; }
+   .tab {
+    /*font: 0.8rem/1.2 Arial, sans-serif; /* Параметры шрифта */*/
+    border: 1px solid #e9eaec; /* Параметры рамки */
+    border-radius: 3px; /* Скругляем уголки */
+    color: #848994; /* Цвет текста */
+    margin-bottom: 5px; /* Расстояние между пунктами */
+   }
+   .tab-title {
+    padding: 5px; /* Поля вокруг текста */
+    display: block; /* Блочный элемент */
+    text-transform: uppercase; /* Все буквы заглавные */
+    font-weight: bold; /* Жирное начертание */
+    cursor: pointer; /* Вид курсора */
+    position: relative;
+    left: 20px;
+    width: calc(100% - 60px);
+   }
+   .tab-title::after {
+    /*content: '+';  Выводим плюс */
+    float: right; /* Размещаем по правому краю */
+   }
+   .tab-content {
+    padding: 10px 20px; /* Поля вокруг текста */
+    border-top: 1px solid gray;
+    margin-top: 5px;
+   }
+   .tab :checked + .tab-title {
+    background-color: #50a2de; /* Цвет фона */
+    border-radius: 3px 3px 0 0; /* Скругляем уголки */
+    color: #fff; /* Цвет текста */
+   }
+   .tab :checked + .tab-title::after {
+    content: '−'; /* Выводим минус */
+   }
+   .tab :checked ~ .tab-content {
+    display: block; /* Показываем содержимое */
+   }
+   .tab-content div{
+    font-size: 20px;
+   }
